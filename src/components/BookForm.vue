@@ -10,6 +10,15 @@
         </label>
       </div>
     </div>
+    <div>
+      <label for="borrowed">
+        <input v-model="bookData.ownership" type="radio" id="borrowed" value="borrowed">
+      </label>
+      <label for="bought">
+        bought
+        <input v-model="bookData.ownership" type="radio" id="bought" value="bought">
+      </label>
+    </div>
     <button type="submit" name="button">Add Book</button>
   </form>
 </template>
