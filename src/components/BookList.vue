@@ -18,6 +18,7 @@
 </template>
 
 <script>
+import BookItem from "lodash";
 import BookItem from "./BookItem";
 import BookForm from "./BookForm";
 
@@ -42,7 +43,7 @@ export default {
   },
   methods: {
     appendBook(bookData) {
-      this.books.push({ title: bookData.bookTitle, author: bookData.bookAuthor, finishedReading: bookData.finishedReading });
+      this.books.push({ title: bookData.bookTitle, author: bookData.bookAuthor, finishedReading: bookData.finishedReading, ownership: bookData.ownership });
     }
   }
 };
