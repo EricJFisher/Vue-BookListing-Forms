@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import BookItem from "lodash";
+import _ from "lodash";
 import BookItem from "./BookItem";
 import BookForm from "./BookForm";
 
@@ -40,6 +40,11 @@ export default {
   components: {
     BookItem,
     BookForm
+  },
+  computed: {
+    filteredBooks() {
+      return _.filter(this.books, ["ownership", this.holding]);
+    }
   },
   methods: {
     appendBook(bookData) {
